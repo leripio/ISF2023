@@ -1,11 +1,9 @@
 ---
 title: "Nowcasting Inflation in Brazil Using Web Data"
-author:
-  - name: J. Renato Leripio
-    affiliations:
-      - Kapitalo Investimentos
+author: J. Renato Leripio
 format: 
    revealjs:
+     footer: "43rd International Symposium on Forecasting. Charlottesville, Virginia USA - June 28"
      slide-number: c/t
      date: June 28, 2023
 editor: visual
@@ -17,25 +15,32 @@ bibliography: references.bib
 - Inflation expectations have a direct effect on the yield curve and stocks.
 - Large surprises in monthly releases can and do shift expectations accordingly.
 - The presence of some very volatile items with a high share in the consumption basket makes short-term inflation particularly hard to forecast.
-- Special events such as out-of-season sales or supply disruptions pose an additional challenge that statistical models fail to capture.
+- Special events such as out-of-season sales, supply disruptions and tax changes pose an additional challenge that statistical models fail to capture.
 
-## The literature
-
+## What the literature says
+::: {style="font-size:25.2pt"}
 - @stockwatson2010: "It is exceedingly difficult to improve
 systematically upon simple univariate forecasting models".
 - @medeiros2021: "Our results show that it is possible to consistently beat univariate benchmarks". 
   - Random Forest using a high dimensional (publicly available) data set.
   - Greater gains for 3-up-to-5 months ahead. 
+- Similar results can be found for Brazil, though with additional challenges:
+  - Market participants make extensive use of the FGV Monitor, which provides daily figures for every CPI item collected at brick-and-mortar stores.
+:::
 
 ## The real horse race in Brazil
+::: {style="font-size:17pt"}
+- Dozens of qualified market participants improving their forecasts on a daily basis.
+- Highly accurate short-term forecasts: bottom-up approach, high quality data and judgment.
+:::
 
-- Dozens of qualified market participants (BCB Focus Survey).
-- Highly accurate short-term forecasts.
-  - RMSFE: 0.95 (Focus) vs. 2.41 (RW).
-    - Bottom-up approach and Judgment.
-- Low dispersion (on average, 3/4 of predictions differ by less than 10bps).
-- Beating univariate benchmarks is not enough to beat the market (@garcia2017)
-- It's mandatory to tackle specific items in the hierarchy.
+![](images/focus_error.png){fig-align="center"}
+
+::: {style="font-size:17pt"}
+- Beating univariate benchmarks is not enough to beat the market (@garcia2017).
+- Accuracy: directional and relative to the market. 
+- Improving a few basis points over Focus (our target) requires tackling specific items.
+:::
 
 ## The recent case of Industrial Goods
 
@@ -47,60 +52,71 @@ systematically upon simple univariate forecasting models".
 
 ::: {style="font-size:17pt"}
 - High volatility and large share in the consumption basket means that this item contributes disproportionately to the headline forecasting errors.
-- And the lack of a reliable explanatory variable makes this item an obvious candidate for improving overall accuracy.
 :::
 
 ## Online prices is a powerful alternative
 
+::: {style="font-size:28pt"}
 - Web data usually involves full pass-through and no significant lags compared to brick–and–mortar stores.
 
 - However, both greater product availability and higher frequency data require spending more time on selection tasks.
 
-- In addition, the way we summarize information to compute the indicator is item-specific and may require solid field knowledge.
+- In addition, the way we summarize information to compute the indicator is item-specific and may require solid field knowledge. Ex:
+  - Perfume: a panel of the same products over time.
+  - Electronic devices: constant features (for some time), but products may vary. 
+:::
 
-## Application: CPI for Perfume
+## CPI for Perfume
 
-::: {style="font-size:18pt"}
-1. Collect prices from the most representative brands on a daily basis.
-
-2. Select the most popular products for each brand.
-
-3. Compute baskets subject to market share constraints.
-
-4. Choose a set of baskets based on out-of-sample performance.
+::: {style="font-size:17pt"}
+- Online prices were able to capture significant events such as out-of-season sales (Aug), black friday (Nov), End-of-year sales (Dec.) and the 'normalization' (Jan). 
 :::
 
 ![](images/perfume.png){fig-align="center"}
 
-## More conventional examples
+## Other examples
+
+::: {style="font-size:17pt"}
+- Online prices were able to better capture the desinflation following a supply disrupt in the Milk market.
+- As with perfume, online prices were also better at capturing the movements of Black Friday for PC.
+:::
+
 ::: {layout-ncol=2}
 ![](images/leite.png)
 
 ![](images/pc.png)
 :::
 
-::: {style="font-size:18pt"}
-- The national statistical bureau collects and summarizes each CPI item using different methodologies. A great deal of effort goes into trying to reproduce accordingly.
+::: {style="font-size:17pt"}
+- The national statistical bureau collects and summarizes each CPI item using different methodologies. A great deal of effort then goes into trying to reproduce the items accordingly.
 - Sometimes we're just not measuring the same thing. However, it's still possible to anticipate trends.
-  - Example: Used cars
 :::
 
 ## Used cars
 
 ::: {style="font-size:18pt"}
 - We measure the listing price, not the actual deal price.
-- Rather than an accurate number, online prices may reveal changes in market trends. 
+- In addition to an accurate number, online prices may reveal changes in market trends more timely. 
 :::
 
 ![](images/auto_usado.png){fig-align="center"}
 
 ::: {style="font-size:18pt"}
-- To be fair, during most of the recent period the indicator most used by the market showed upward rather than downward prices.
+- During most of the recent period the benchmark showed upward rather than downward level prices.
 :::
+
+## Practical result
+
+::: {style="font-size:18pt"}
+- We cannot rule out the possibility that other players are also using proprietary data.
+- However, we can safely state that incorporating new data allowed us to be more accurate compared to the market in the recent period of high volatility.
+:::
+
+![](images/bens_ind_kp.png){fig-align="center"}
 
 ## Main Takeaways
 
-- It's very unlikely that anyone will be able to outperform the market using conventional data.
+- It's very unlikely that anyone will be able to outperform the market using only publicly available data.
 
 - There is great potential for improvement by more accurately predicting specific items.
 
@@ -108,7 +124,7 @@ systematically upon simple univariate forecasting models".
 
 - Transforming these data into reliable indicators is not trivial, but it surely pays off.
 
-- Finally, it's no longer possible to compete without this type of information.
+- Finally, I believe that in a short time it will no longer be possible to compete without this type of information.
 
 ------------------------------------------------------------------------
 
