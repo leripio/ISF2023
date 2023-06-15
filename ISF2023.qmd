@@ -3,6 +3,8 @@ title: "Nowcasting Inflation in Brazil Using Web Data"
 author: J. Renato Leripio
 format: 
    revealjs:
+     incremental: true
+     transition: fade
      footer: "43rd International Symposium on Forecasting. Charlottesville, Virginia USA - June 28"
      slide-number: c/t
      date: June 28, 2023

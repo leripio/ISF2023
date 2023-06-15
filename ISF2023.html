@@ -352,25 +352,25 @@
 <section id="motivation" class="slide level2">
 <h2>Motivation</h2>
 <ul>
-<li>Inflation expectations have a direct effect on the yield curve and stocks.</li>
-<li>Large surprises in monthly releases can and do shift expectations accordingly.</li>
-<li>The presence of some very volatile items with a high share in the consumption basket makes short-term inflation particularly hard to forecast.</li>
-<li>Special events such as out-of-season sales, supply disruptions and tax changes pose an additional challenge that statistical models fail to capture.</li>
+<li class="fragment">Inflation expectations have a direct effect on the yield curve and stocks.</li>
+<li class="fragment">Large surprises in monthly releases can and do shift expectations accordingly.</li>
+<li class="fragment">The presence of some very volatile items with a high share in the consumption basket makes short-term inflation particularly hard to forecast.</li>
+<li class="fragment">Special events such as out-of-season sales, supply disruptions and tax changes pose an additional challenge that statistical models fail to capture.</li>
 </ul>
 </section>
 <section id="what-the-literature-says" class="slide level2">
 <h2>What the literature says</h2>
 <div style="font-size:25.2pt">
 <ul>
-<li><span class="citation" data-cites="stockwatson2010">Stock and Watson (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span>: “It is exceedingly difficult to improve systematically upon simple univariate forecasting models”.</li>
-<li><span class="citation" data-cites="medeiros2021">Medeiros et al. (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>: “Our results show that it is possible to consistently beat univariate benchmarks”.
+<li class="fragment"><span class="citation" data-cites="stockwatson2010">Stock and Watson (<a href="#/references" role="doc-biblioref" onclick="">2010</a>)</span>: “It is exceedingly difficult to improve systematically upon simple univariate forecasting models”.</li>
+<li class="fragment"><span class="citation" data-cites="medeiros2021">Medeiros et al. (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span>: “Our results show that it is possible to consistently beat univariate benchmarks”.
 <ul>
-<li>Random Forest using a high dimensional (publicly available) data set.</li>
-<li>Greater gains for 3-up-to-5 months ahead.</li>
+<li class="fragment">Random Forest using a high dimensional (publicly available) data set.</li>
+<li class="fragment">Greater gains for 3-up-to-5 months ahead.</li>
 </ul></li>
-<li>Similar results can be found for Brazil, though with additional challenges:
+<li class="fragment">Similar results can be found for Brazil, though with additional challenges:
 <ul>
-<li>Market participants make extensive use of the FGV Monitor, which provides daily figures for every CPI item collected at brick-and-mortar stores.</li>
+<li class="fragment">Market participants make extensive use of the FGV Monitor, which provides daily figures for every CPI item collected at brick-and-mortar stores.</li>
 </ul></li>
 </ul>
 </div>
@@ -379,16 +379,16 @@
 <h2>The real horse race in Brazil</h2>
 <div style="font-size:17pt">
 <ul>
-<li>Dozens of qualified market participants improving their forecasts on a daily basis.</li>
-<li>Highly accurate short-term forecasts: bottom-up approach, high quality data and judgment.</li>
+<li class="fragment">Dozens of qualified market participants improving their forecasts on a daily basis.</li>
+<li class="fragment">Highly accurate short-term forecasts: bottom-up approach, high quality data and judgment.</li>
 </ul>
 </div>
 
 <img data-src="images/focus_error.png" class="r-stretch quarto-figure-center"><div style="font-size:17pt">
 <ul>
-<li>Beating univariate benchmarks is not enough to beat the market (<span class="citation" data-cites="garcia2017">Garcia, Medeiros, and Vasconcelos (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span>).</li>
-<li>Accuracy: directional and relative to the market.</li>
-<li>Improving a few basis points over Focus (our target) requires tackling specific items.</li>
+<li class="fragment">Beating univariate benchmarks is not enough to beat the market (<span class="citation" data-cites="garcia2017">Garcia, Medeiros, and Vasconcelos (<a href="#/references" role="doc-biblioref" onclick="">2017</a>)</span>).</li>
+<li class="fragment">Accuracy: directional and relative to the market.</li>
+<li class="fragment">Improving a few basis points over Focus (our target) requires tackling specific items.</li>
 </ul>
 </div>
 </section>
@@ -396,13 +396,13 @@
 <h2>The recent case of Industrial Goods</h2>
 <div style="font-size:17pt">
 <ul>
-<li>Large forecast errors for Ind. Goods arguably due to erroneous prediction of perfume prices.</li>
+<li class="fragment">Large forecast errors for Ind. Goods arguably due to erroneous prediction of perfume prices.</li>
 </ul>
 </div>
 
 <img data-src="images/ind_goods.png" class="r-stretch quarto-figure-center"><div style="font-size:17pt">
 <ul>
-<li>High volatility and large share in the consumption basket means that this item contributes disproportionately to the headline forecasting errors.</li>
+<li class="fragment">High volatility and large share in the consumption basket means that this item contributes disproportionately to the headline forecasting errors.</li>
 </ul>
 </div>
 </section>
@@ -410,12 +410,12 @@
 <h2>Online prices is a powerful alternative</h2>
 <div style="font-size:28pt">
 <ul>
-<li><p>Web data usually involves full pass-through and no significant lags compared to brick–and–mortar stores.</p></li>
-<li><p>However, both greater product availability and higher frequency data require spending more time on selection tasks.</p></li>
-<li><p>In addition, the way we summarize information to compute the indicator is item-specific and may require solid field knowledge. Ex:</p>
+<li class="fragment"><p>Web data usually involves full pass-through and no significant lags compared to brick–and–mortar stores.</p></li>
+<li class="fragment"><p>However, both greater product availability and higher frequency data require spending more time on selection tasks.</p></li>
+<li class="fragment"><p>In addition, the way we summarize information to compute the indicator is item-specific and may require solid field knowledge. Ex:</p>
 <ul>
-<li>Perfume: a panel of the same products over time.</li>
-<li>Electronic devices: constant features (for some time), but products may vary.</li>
+<li class="fragment">Perfume: a panel of the same products over time.</li>
+<li class="fragment">Electronic devices: constant features (for some time), but products may vary.</li>
 </ul></li>
 </ul>
 </div>
@@ -424,7 +424,7 @@
 <h2>CPI for Perfume</h2>
 <div style="font-size:17pt">
 <ul>
-<li>Online prices were able to capture significant events such as out-of-season sales (Aug), black friday (Nov), End-of-year sales (Dec.) and the ‘normalization’ (Jan).</li>
+<li class="fragment">Online prices were able to capture significant events such as out-of-season sales (Aug), black friday (Nov), End-of-year sales (Dec.) and the ‘normalization’ (Jan).</li>
 </ul>
 </div>
 
@@ -433,8 +433,8 @@
 <h2>Other examples</h2>
 <div style="font-size:17pt">
 <ul>
-<li>Online prices were able to better capture the desinflation following a supply disrupt in the Milk market.</li>
-<li>As with perfume, online prices were also better at capturing the movements of Black Friday for PC.</li>
+<li class="fragment">Online prices were able to better capture the desinflation following a supply disrupt in the Milk market.</li>
+<li class="fragment">As with perfume, online prices were also better at capturing the movements of Black Friday for PC.</li>
 </ul>
 </div>
 <div class="quarto-layout-panel">
@@ -449,8 +449,8 @@
 </div>
 <div style="font-size:17pt">
 <ul>
-<li>The national statistical bureau collects and summarizes each CPI item using different methodologies. A great deal of effort then goes into trying to reproduce the items accordingly.</li>
-<li>Sometimes we’re just not measuring the same thing. However, it’s still possible to anticipate trends.</li>
+<li class="fragment">The national statistical bureau collects and summarizes each CPI item using different methodologies. A great deal of effort then goes into trying to reproduce the items accordingly.</li>
+<li class="fragment">Sometimes we’re just not measuring the same thing. However, it’s still possible to anticipate trends.</li>
 </ul>
 </div>
 </section>
@@ -458,14 +458,14 @@
 <h2>Used cars</h2>
 <div style="font-size:18pt">
 <ul>
-<li>We measure the listing price, not the actual deal price.</li>
-<li>In addition to an accurate number, online prices may reveal changes in market trends more timely.</li>
+<li class="fragment">We measure the listing price, not the actual deal price.</li>
+<li class="fragment">In addition to an accurate number, online prices may reveal changes in market trends more timely.</li>
 </ul>
 </div>
 
 <img data-src="images/auto_usado.png" class="r-stretch quarto-figure-center"><div style="font-size:18pt">
 <ul>
-<li>During most of the recent period the benchmark showed upward rather than downward level prices.</li>
+<li class="fragment">During most of the recent period the benchmark showed upward rather than downward level prices.</li>
 </ul>
 </div>
 </section>
@@ -473,8 +473,8 @@
 <h2>Practical result</h2>
 <div style="font-size:18pt">
 <ul>
-<li>We cannot rule out the possibility that other players are also using proprietary data.</li>
-<li>However, we can safely state that incorporating new data allowed us to be more accurate compared to the market in the recent period of high volatility.</li>
+<li class="fragment">We cannot rule out the possibility that other players are also using proprietary data.</li>
+<li class="fragment">However, we can safely state that incorporating new data allowed us to be more accurate compared to the market in the recent period of high volatility.</li>
 </ul>
 </div>
 
@@ -482,11 +482,11 @@
 <section id="main-takeaways" class="slide level2">
 <h2>Main Takeaways</h2>
 <ul>
-<li><p>It’s very unlikely that anyone will be able to outperform the market using only publicly available data.</p></li>
-<li><p>There is great potential for improvement by more accurately predicting specific items.</p></li>
-<li><p>Short-term forecast can benefit enormously from unstructured data as a whole, not only from websites.</p></li>
-<li><p>Transforming these data into reliable indicators is not trivial, but it surely pays off.</p></li>
-<li><p>Finally, I believe that in a short time it will no longer be possible to compete without this type of information.</p></li>
+<li class="fragment"><p>It’s very unlikely that anyone will be able to outperform the market using only publicly available data.</p></li>
+<li class="fragment"><p>There is great potential for improvement by more accurately predicting specific items.</p></li>
+<li class="fragment"><p>Short-term forecast can benefit enormously from unstructured data as a whole, not only from websites.</p></li>
+<li class="fragment"><p>Transforming these data into reliable indicators is not trivial, but it surely pays off.</p></li>
+<li class="fragment"><p>Finally, I believe that in a short time it will no longer be possible to compete without this type of information.</p></li>
 </ul>
 </section>
 <section class="slide level2">
@@ -673,7 +673,7 @@ Stock, James H, and Mark W Watson. 2010. <span>“Modeling Inflation After the C
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'fade',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
